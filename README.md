@@ -23,8 +23,8 @@ This model can also be used with T2*Gre images.
 A segmentation can be computed as the average of the inference of several models (depending on the number of folds used in the training for a particular model).
 <!-- -->
 * The segmentation model described in the publication
-    * due to file size limitation the models can be found [here](https://cloud.efixia.com/sharing/6aytHAFQi) : https://cloud.efixia.com/sharing/6aytHAFQi
-    * Checksum : 9131efbebd4d6a7bbbf65540a6e2938e
+    * due to file size limitation the models can be found [here](https://cloud.efixia.com/sharing/mb4gM77BK) :https://cloud.efixia.com/sharing/mb4gM77BK
+    * Checksum : 998ab737afc83ae48a193803c50cf3de
 
 The resulting segmentation is an image with voxels values in [0, 1] (proxy for the probability of detection of WMH) that must be thresholded to get the final segmentation. A threshold of 0.5 has been used successfully but that depends on the preferred balance between precision and sensitivity.
 
