@@ -2,6 +2,8 @@
 
 This repository contains the trained tensorflow models for the 3D Segmentation of Cerebral Microbleeds on SWI MR Images with a 3D U-Shaped Neural Network (U-net) as described in a forthcoming scientific publication.
 
+![Gif Image](https://github.com/pboutinaud/SHIVA_PVS/blob/main/docs/Images/SHIVA_BrainTools_small2.gif)
+
 ## IP, Licencing & Usage
 
 **The inferences created by these models should not be used for clinical purposes.**
