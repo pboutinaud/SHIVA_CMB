@@ -29,9 +29,29 @@ The models were trained with Tensorflow >= 2.7 used with Python 3.7, they are st
 
 A NVIDIA GPU with at least 9Go of RAM is needed to compute inferences with the trained models.
 
-## Usage
-The provided python script *predict_one_file.py* can be used as an example of usage of the model. It needs the *nibabel* python library to be able to read NIfTI files.
+To run the `predict_one_file.py` script, you will need a python environment with the following librairies:
+- tensorflow >= 2.7
+- numpy
+- nibabel
 
+If you don't know anything about python environment and libraries, you can find some documentation and installers on the [Anaconda website](https://docs.anaconda.com/). We recommend using the lightweight [Miniconda](https://docs.anaconda.com/miniconda/).
+
+## Usage
+The provided python script `predict_one_file.py` can be used as is for running the model or can be used an example to build your own script.
+
+To run `predict_one_file.py` in your python environment you can check the help with the command `python predict_one_file.py -h` (replace "predict_one_file.py" with the full path to the script if it is not in the working directory).
+
+Here is an example of usage of the script with the following inputs:
+- Preprocessed Nifti images (volume shape must be 160 × 214 × 176 and voxel values between 0 and 1) stored (for the example) in the folder `/myhome/mydata/`
+- The CMB AI models stored (for the example) in `/myhome/cmb_models/v1` (don't forget to unzip the downloaded file)
+- The ouput folder (for the example) `/myhome/my_results` needs to exist at launch
+
+```bash
+python predict_one_file.py -i /myhome/mydata/swi_image.nii.gz -b /myhome/mydata/input_brainmask.nii.gz -o /myhome/my_results/cmb_segmentation.nii.gz -m /myhome/cmb_models/v1/20230330-095525_Unet3Dv2-10.7.2-1.8-SWAN.CMB_fold_CMB_1x3-331_fold_1_model.h5 -m /myhome/cmb_models/v1/20230329-221948_Unet3Dv2-10.7.2-1.8-SWAN.CMB_fold_CMB_1x3-331_fold_2_model.h5 -m /myhome/cmb_models/v1/20230328-101347_Unet3Dv2-10.7.2-1.8-SWAN.CMB_fold_CMB_1x3-331_fold_0_model.h5 
+```
+>Note that the brain mask input here with `-b /myhome/mydata/input_brainmask.nii.gz` is optional
+
+## Building your own script
 Here is the main part of the script, assuming that the images are in a numpy array with the correct shape (*nb of images*, 160, 214, 176, *number of modality to use for this model*) and you have enough CPU RAM to load all images in one array (else use a Tensorflow dataset) :
 ````python
 # Load models & predict
