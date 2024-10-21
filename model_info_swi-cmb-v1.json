@@ -1,0 +1,23 @@
+{
+  "version": "v1",
+  "release date": "30/03/2023",
+  "author": "Philippe Boutinaud",
+  "target": "CMB",
+  "modalities": [
+    "swi"
+  ],
+  "files": [
+    {
+      "name": "v1/20230328-101347_Unet3Dv2-10.7.2-1.8-SWAN.CMB_fold_CMB_1x3-331_fold_0_model.h5",
+      "md5": "cc5e9c4a75796020e63d54a9fb584abb"
+    },
+    {
+      "name": "v1/20230329-221948_Unet3Dv2-10.7.2-1.8-SWAN.CMB_fold_CMB_1x3-331_fold_2_model.h5",
+      "md5": "358e3bce66fe9e502862abf43e4bfb1f"
+    },
+    {
+      "name": "v1/20230330-095525_Unet3Dv2-10.7.2-1.8-SWAN.CMB_fold_CMB_1x3-331_fold_1_model.h5",
+      "md5": "da32ad7ebd2f3944449009df27c81147"
+    }
+  ]
+}
