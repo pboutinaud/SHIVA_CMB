@@ -23,6 +23,7 @@ The segmentation can be computed as the average of the inference of several mode
 * The segmentation models described in the publication
     * due to file size limitation the models can be found [here](https://cloud.efixia.com/sharing/mb4gM77BK) https://cloud.efixia.com/sharing/mb4gM77BK
     * Checksum : 998ab737afc83ae48a193803c50cf3de
+    * JSON file for SHiVAi pipeline: [model_info_swi-cmb-v1.json](model_info_swi-cmb-v1.json)
 
 ## Requirements
 The models were trained with Tensorflow >= 2.7 used with Python 3.7, they are stored in the H5 format (there is a compatibility problem when reading tendorflow H5 files by using Python version > 3.7).
