@@ -91,3 +91,10 @@ This work has been done in collaboration between the [Fealinx](http://www.fealin
 |<img src="./docs/logos/shiva_blue.png" width="100" height="100" />|<img src="./docs/logos/fealinx.jpg" height="200" />|<img src="./docs/logos/Logo-Gin.png" height="200" />|<img src="./docs/logos/logo_ginesis-1.jpeg" height="100" />|<img src="./docs/logos/logo_anr.png" height="50" />|
 |---|---|---|---|---|
 
+## Publication
+
+https://www.nature.com/articles/s41598-024-81870-5
+
+Tsuchida, A., Goubet, M., Boutinaud, P., Astafeva, I., Nozais, V., Hervé, P. Y., Tourdias, T., Debette, S., & Joliot, M. (2024). SHIVA-CMB: a deep-learning-based robust cerebral microbleed segmentation tool trained on multi-source T2*GRE- and susceptibility-weighted MRI. Scientific reports, 14(1), 30901. 
+
+https://doi.org/10.1038/s41598-024-81870-5
