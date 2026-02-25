@@ -13,13 +13,16 @@
   "sha256_zip": "DC4E3A8E92C32657A172754B0971E849737157AF07D2A229E58016D0F3A4229B",
   "files": [
     {
-      "name": "SWI-CMB/20250129-192041_ResUnet3D-8.9.2-1.5-SWAN.CMB_prod2_fold_0_bestvalloss.tf_inference"
+      "name": "SWI-CMB/20250129-192041_ResUnet3D-8.9.2-1.5-SWAN.CMB_prod2_fold_0_bestvalloss.tf_inference",
+      "md5": "a5ae990416b0149097e1698e2e28b00a"
     },
     {
-      "name": "SWI-CMB/20250129-195344_ResUnet3D-8.9.2-1.5-SWAN.CMB_prod2_fold_1_bestvalloss.tf_inference"
+      "name": "SWI-CMB/20250129-195344_ResUnet3D-8.9.2-1.5-SWAN.CMB_prod2_fold_1_bestvalloss.tf_inference",
+      "md5": "23fd23c83a9b30fe6dab7bef5f3277ce"
     },
     {
-      "name": "SWI-CMB/20250129-192041_ResUnet3D-8.9.2-1.5-SWAN.CMB_prod2_fold_2_bestvalloss.tf_inference"
+      "name": "SWI-CMB/20250129-192041_ResUnet3D-8.9.2-1.5-SWAN.CMB_prod2_fold_2_bestvalloss.tf_inference",
+      "md5": "667370eb8997718b4a8cd9e89d6c1bdd"
     }
   ]
 }
