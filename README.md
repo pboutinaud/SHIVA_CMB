@@ -22,12 +22,12 @@ The segmentation can be computed as the average of the inference of several mode
 
 To access the models :
 * **v2/SWI-CMB (recommended)**: New production models based on the ResUnet3D architecture, trained with Keras 3 / TensorFlow ≥ 2.17. The models are stored in the TensorFlow SavedModel format (3 folds).
-    * Download: [cloud.efixia.com](https://cloud.efixia.com/sharing/hwR97APpm)
+    * Download: [cloud.efixia.com](https://cloud.efixia.com/sharing/qWYAqMeGX)
     * SHA256 checksum : DC4E3A8E92C32657A172754B0971E849737157AF07D2A229E58016D0F3A4229B
     * JSON file for SHiVAi pipeline: [model_info_swi-cmb-v2.json](model_info_swi-cmb-v2.json)
 
 * v1/SWI-CMB: The segmentation models described in the publication, stored in H5 format (3 folds). Requires TensorFlow ≥ 2.7 with legacy Keras (tf-keras).
-    * due to file size limitation the models can be found [here](https://cloud.efixia.com/sharing/mb4gM77BK) https://cloud.efixia.com/sharing/mb4gM77BK
+    * due to file size limitation the models can be found [here](https://cloud.efixia.com/sharing/9US4BSbQp) https://cloud.efixia.com/sharing/9US4BSbQp
     * MD5 checksum : 998ab737afc83ae48a193803c50cf3de
     * JSON file for SHiVAi pipeline: [model_info_swi-cmb-v1.json](model_info_swi-cmb-v1.json)
 
