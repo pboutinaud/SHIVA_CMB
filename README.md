@@ -21,7 +21,12 @@ The models were trained with SWI images with a size of 160 × 214 × 176 x 1 vox
 The segmentation can be computed as the average of the inference of several models (depending on the number of folds used in the training for a particular model). The resulting segmentation is an image with voxels values in [0, 1] (proxy for the probability of detection of CMB) that must be thresholded to get the actual segmentation. A threshold of 0.5 has been used successfully but that depends on the preferred balance between precision and sensitivity.
 
 To access the models :
-* **v2/SWI-CMB (recommended)**: New production models based on the ResUnet3D architecture, trained with Keras 3 / TensorFlow ≥ 2.17. The models are stored in the TensorFlow SavedModel format (3 folds).
+* **v5/SWI-CMB (recommended)**: New production models based on the smaller ResUnet3D-8.7.2 architecture (about 8.4M parameters, each fold about 5 times smaller than in v2), trained with Keras 3 / TensorFlow ≥ 2.17. Same performance as v2 with a smaller footprint. The models are stored in the TensorFlow SavedModel format (5 folds).
+    * Download: [cloud.efixia.com](https://cloud.efixia.com/sharing/0A63lc9bQ)
+    * SHA256 checksum : 049B195DB23129917BF55E587739E645B70E9346BD0AEB032AA351AA8E212839
+    * JSON file for SHiVAi pipeline: [model_info_swi-cmb-v5.json](model_info_swi-cmb-v5.json)
+
+* **v2/SWI-CMB**: Previous production models based on the ResUnet3D architecture, trained with Keras 3 / TensorFlow ≥ 2.17. The models are stored in the TensorFlow SavedModel format (3 folds).
     * Download: [cloud.efixia.com](https://cloud.efixia.com/sharing/qWYAqMeGX)
     * SHA256 checksum : DC4E3A8E92C32657A172754B0971E849737157AF07D2A229E58016D0F3A4229B
     * JSON file for SHiVAi pipeline: [model_info_swi-cmb-v2.json](model_info_swi-cmb-v2.json)
@@ -33,7 +38,7 @@ To access the models :
 
 ## Requirements
 
-### For new models (v2, SavedModel format)
+### For new models (v2/v5, SavedModel format)
 The models require TensorFlow ≥ 2.17 and were tested with Python 3.12 and TensorFlow 2.20. They are stored in the TensorFlow SavedModel format. A NVIDIA GPU with at least 9 GB of VRAM is recommended for inference (CPU inference is also supported but slower).
 
 ### For legacy models (v1, H5 format)
@@ -62,19 +67,21 @@ To run `predict_one_file.py` in your python environment you can check the help w
 Here is an example of usage of the script with the new SavedModel models:
 - The `predict_one_file.py` script stored in `/myhome/my_scripts/`
 - Preprocessed Nifti images (volume shape must be 160 × 214 × 176 and voxel values between 0 and 1) stored (for the example) in the folder `/myhome/mydata/`
-- The CMB AI models stored (for the example) in `/myhome/cmb_models/v2`
+- The CMB AI models stored (for the example) in `/myhome/cmb_models/v5`
 - The ouput folder (for the example) `/myhome/my_results` needs to exist at launch
 
 ```bash
-# New SavedModel models (v2, recommended)
+# New SavedModel models (v5, recommended)
 python /myhome/my_scripts/predict_one_file.py \
     -i /myhome/mydata/swi_image.nii.gz \
     -b /myhome/mydata/input_brainmask.nii.gz \
     -o /myhome/my_results/cmb_segmentation.nii.gz \
     --batch_size 1 --gpu 0 \
-    -m /myhome/cmb_models/v2/20250129-192041_ResUnet3D-8.9.2-1.5-SWAN.CMB_prod2_fold_0_bestvalloss.tf_inference \
-    -m /myhome/cmb_models/v2/20250129-195344_ResUnet3D-8.9.2-1.5-SWAN.CMB_prod2_fold_1_bestvalloss.tf_inference \
-    -m /myhome/cmb_models/v2/20250129-192041_ResUnet3D-8.9.2-1.5-SWAN.CMB_prod2_fold_2_bestvalloss.tf_inference
+    -m /myhome/cmb_models/v5/20260716-041657_ResUnet3D-8.7.2-1.5-SWAN.CMB_production_045_cmb_prod_fold_0_bestvalloss.tf_inference \
+    -m /myhome/cmb_models/v5/20260716-041657_ResUnet3D-8.7.2-1.5-SWAN.CMB_production_045_cmb_prod_fold_1_bestvalloss.tf_inference \
+    -m /myhome/cmb_models/v5/20260716-234605_ResUnet3D-8.7.2-1.5-SWAN.CMB_production_045_cmb_prod_fold_2_bestvalloss.tf_inference \
+    -m /myhome/cmb_models/v5/20260716-174336_ResUnet3D-8.7.2-1.5-SWAN.CMB_production_045_cmb_prod_fold_3_bestvalloss.tf_inference \
+    -m /myhome/cmb_models/v5/20260717-123101_ResUnet3D-8.7.2-1.5-SWAN.CMB_production_045_cmb_prod_fold_4_bestvalloss.tf_inference
 ```
 >Note that the brain mask input here with `-b /myhome/mydata/input_brainmask.nii.gz` is optional
 

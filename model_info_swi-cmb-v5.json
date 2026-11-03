@@ -1,0 +1,36 @@
+{
+  "version": "v5",
+  "release date": "03/11/2026",
+  "author": "Philippe Boutinaud",
+  "url": "https://cloud.efixia.com/sharing/0A63lc9bQ",
+  "target": "CMB",
+  "modalities": [
+    "swi"
+  ],
+  "architecture": "ResUnet3D-8.7.2-1.5",
+  "model_format": "SavedModel",
+  "tensorflow_min_version": "2.17",
+  "sha256_zip": "049B195DB23129917BF55E587739E645B70E9346BD0AEB032AA351AA8E212839",
+  "files": [
+    {
+      "name": "SWI-CMB/20260716-041657_ResUnet3D-8.7.2-1.5-SWAN.CMB_production_045_cmb_prod_fold_0_bestvalloss.tf_inference",
+      "md5": "ba976438ed05975b63966511bd6e4c28"
+    },
+    {
+      "name": "SWI-CMB/20260716-041657_ResUnet3D-8.7.2-1.5-SWAN.CMB_production_045_cmb_prod_fold_1_bestvalloss.tf_inference",
+      "md5": "13c4ae9074135ab4583394632110de7a"
+    },
+    {
+      "name": "SWI-CMB/20260716-234605_ResUnet3D-8.7.2-1.5-SWAN.CMB_production_045_cmb_prod_fold_2_bestvalloss.tf_inference",
+      "md5": "77088ef89d8150b770e40c6f2605136a"
+    },
+    {
+      "name": "SWI-CMB/20260716-174336_ResUnet3D-8.7.2-1.5-SWAN.CMB_production_045_cmb_prod_fold_3_bestvalloss.tf_inference",
+      "md5": "06722f761f285491bfae69129baec9c2"
+    },
+    {
+      "name": "SWI-CMB/20260717-123101_ResUnet3D-8.7.2-1.5-SWAN.CMB_production_045_cmb_prod_fold_4_bestvalloss.tf_inference",
+      "md5": "e616fa9eb8ba0a56f9b6381a9b7c645d"
+    }
+  ]
+}
